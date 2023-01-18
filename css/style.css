@@ -1,29 +1,30 @@
 
 .bgColor {
     background-color: #F4B88B;
+    
 }
 .titleText {
     color: rgb(215, 215, 215);
     font-family: 'Press Start 2P', cursive; font-size: 54px;
     text-align: center;
     text-shadow: -1px 1px 2px black;
-    
 }
 #titleRow {
     background-color: #05294C;
-    padding: 50px;
-
+    height: 237px;
+    align-items: center;
 }
 .selectText {
     color: rgb(215, 215, 215);
     font-family: 'Press Start 2P', cursive; font-size: 54px;
-    text-align: center;
     background-color: #AD342E; 
-    padding: 50px;
+    height: 167px;
     text-shadow: -1px 1px 2px black;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
-
 .btn.btn-primary.btn-lg {
     color: rgb(215, 215, 215);
     font-family: 'Press Start 2P', cursive; font-size: 54px;
@@ -31,7 +32,17 @@
     margin: 100px;
     text-shadow: -1px 1px 2px black;
 }
-
+.button {
+    height: 124px;
+    width: 520px;
+    color: rgb(215, 215, 215);
+    font-family: 'Press Start 2P', cursive; font-size: 50px;
+    background-color: #4082AC; padding: 20px;
+    border-radius: 4px;
+    margin: 100px;
+    text-shadow: -1px 1px 2px black;
+    box-shadow: -1px 3px 6px black;
+}
 footer {
     text-align: center;
     font-family: 'Press Start 2P', cursive; font-size: 14px;
@@ -41,3 +52,10 @@ footer {
     padding-inline: 42px; padding-top: 30px; padding-bottom: 30px;
     background-color: rgba(0, 0, 0, 0.182); 
 }
+
+
+
+
+
+/* FOR PLAYER 2 CHOOSE */
+/* background-color: #12373D; */
