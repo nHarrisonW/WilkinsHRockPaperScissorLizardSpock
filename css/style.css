@@ -1,0 +1,43 @@
+
+.bgColor {
+    background-color: #F4B88B;
+}
+.titleText {
+    color: rgb(215, 215, 215);
+    font-family: 'Press Start 2P', cursive; font-size: 54px;
+    text-align: center;
+    text-shadow: -1px 1px 2px black;
+    
+}
+#titleRow {
+    background-color: #05294C;
+    padding: 50px;
+
+}
+.selectText {
+    color: rgb(215, 215, 215);
+    font-family: 'Press Start 2P', cursive; font-size: 54px;
+    text-align: center;
+    background-color: #AD342E; 
+    padding: 50px;
+    text-shadow: -1px 1px 2px black;
+
+}
+
+.btn.btn-primary.btn-lg {
+    color: rgb(215, 215, 215);
+    font-family: 'Press Start 2P', cursive; font-size: 54px;
+    background-color: #4082AC; padding: 20px;
+    margin: 100px;
+    text-shadow: -1px 1px 2px black;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive; font-size: 14px;
+    color: white;
+    text-shadow: -1px 1px 2px black;
+    display: table;
+    padding-inline: 42px; padding-top: 30px; padding-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.182); 
+}
