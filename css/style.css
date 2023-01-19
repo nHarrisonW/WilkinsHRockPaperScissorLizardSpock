@@ -4,58 +4,91 @@
     
 }
 .titleText {
-    color: rgb(215, 215, 215);
-    font-family: 'Press Start 2P', cursive; font-size: 54px;
-    text-align: center;
-    text-shadow: -1px 1px 2px black;
+    font-size: 54px;
 }
 #titleRow {
     background-color: #05294C;
     height: 237px;
     align-items: center;
-}
-.selectText {
     color: rgb(215, 215, 215);
     font-family: 'Press Start 2P', cursive; font-size: 54px;
+    text-align: center;
+    text-shadow: -1px 1px 2px black;
+}
+.scoreText {
+    font-size: 100px;
+}
+.selectRow {
     background-color: #AD342E; 
     height: 167px;
+    align-items: center;
+    color: rgb(215, 215, 215);
+    font-family: 'Press Start 2P', cursive;
     text-shadow: -1px 1px 2px black;
+}
+.selectText {
     display: flex;
     justify-content: center;
-    align-items: center;
-    
 }
-.btn.btn-primary.btn-lg {
-    color: rgb(215, 215, 215);
-    font-family: 'Press Start 2P', cursive; font-size: 54px;
-    background-color: #4082AC; padding: 20px;
-    margin: 100px;
-    text-shadow: -1px 1px 2px black;
+.seriesText {
+    display: flex;
+    justify-content: center;
 }
-.button {
+.player1Text {
+    display: flex;
+    justify-content: center;
+}
+.bigButton {
     height: 124px;
     width: 520px;
     color: rgb(215, 215, 215);
-    font-family: 'Press Start 2P', cursive; font-size: 50px;
-    background-color: #4082AC; padding: 20px;
+    background-color: #4082AC;
     border-radius: 4px;
-    margin: 100px;
     text-shadow: -1px 1px 2px black;
-    box-shadow: -1px 3px 6px black;
+    border: 0;
+}
+.seriesButtons {
+    color: rgb(215, 215, 215);
+    background-color: #4082AC;
+    border-radius: 4px;
+    text-shadow: -1px 1px 2px black;
+    border: 0;
+    font-size: 45px;
+    width: 417px;
+    align-items: center;
+}
+.gameButtons {
+    color: rgb(215, 215, 215);
+    background-color: #4082AC;
+    border-radius: 4px;
+    text-shadow: -1px 1px 2px black;
+    border: 0;
+    font-size: 30px;
+    width: 260px;
+    height: 69.5px;
+    align-items: center;
+}
+#ButtonsRow {
+    height: 325px;
+    font-family: 'Press Start 2P', cursive; font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 footer {
     text-align: center;
     font-family: 'Press Start 2P', cursive; font-size: 14px;
     color: white;
     text-shadow: -1px 1px 2px black;
-    display: table;
+    display: flex;
     padding-inline: 42px; padding-top: 30px; padding-bottom: 30px;
     background-color: rgba(0, 0, 0, 0.182); 
+    height: 177px;
+    margin: 0;
+    align-items: center;
 }
-
-
-
-
-
+.hide-element {
+    display: none;
+}
 /* FOR PLAYER 2 CHOOSE */
 /* background-color: #12373D; */
