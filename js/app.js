@@ -243,5 +243,5 @@ ButtonSpock.addEventListener('click', function () {
         player1Text.textContent = 'You Lose!';
     }
 })
+// For 2 player mode
 // document.getElementById('selectRow').style.backgroundColor = '#12373D'
-// In-Game
