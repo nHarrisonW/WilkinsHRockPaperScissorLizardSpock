@@ -32,6 +32,17 @@ let FooterName = document.getElementById('FooterName');
 let FooterLink = document.getElementById('FooterLink');
 let RulesText = document.getElementById('RulesText');
 
+// In Game
+let GameLength = 0;
+let RoundNumber = 0;
+let Player1Score = 0;
+let Player2Score = 0;
+let CompScore = 0;
+
+let Player1Choice = '';
+let Player2Choice = '';
+let CompChoice = '';
+
 
 // Select a mode
 Button1.addEventListener('click', function () {
@@ -71,25 +82,166 @@ Button2.addEventListener('click', function () {
 
 // Select a series length
 BestOf1Button.addEventListener('click', function () {
+    CallCompApi();
+
     titleText.classList.add('hide-element');
-    scoreText.classList.remove('hide-elements');
+    scoreText.classList.remove('hide-element');
 
     
     BestOf1Button.classList.add('hide-element');
     BestOf5Button.classList.add('hide-element');
     BestOf7Button.classList.add('hide-element');
     
-    ButtonRock.classList.remove('hide-elements');
-    ButtonPaper.classList.remove('hide-elements');
-    ButtonScissors.classList.remove('hide-elements');
-    ButtonLizard.classList.remove('hide-elements');
-    ButtonSpock.classList.remove('hide-elements');
+    ButtonRock.classList.remove('hide-element');
+    ButtonPaper.classList.remove('hide-element');
+    ButtonScissors.classList.remove('hide-element');
+    ButtonLizard.classList.remove('hide-element');
+    ButtonSpock.classList.remove('hide-element');
     
     
     seriesText.classList.add('hide-element');
-    player1Text.classList.remove('hide-elements');
+    player1Text.classList.remove('hide-element');
+
+    GameLength = 1;
+    
+})
+BestOf5Button.addEventListener('click', function () {
+    CallCompApi();
+    titleText.classList.add('hide-element');
+    scoreText.classList.remove('hide-element');
+
+    BestOf1Button.classList.add('hide-element');
+    BestOf5Button.classList.add('hide-element');
+    BestOf7Button.classList.add('hide-element');
+    
+    ButtonRock.classList.remove('hide-element');
+    ButtonPaper.classList.remove('hide-element');
+    ButtonScissors.classList.remove('hide-element');
+    ButtonLizard.classList.remove('hide-element');
+    ButtonSpock.classList.remove('hide-element');
+    
+    seriesText.classList.add('hide-element');
+    player1Text.classList.remove('hide-element');
+    
+    GameLength = 3;
 
 })
+BestOf7Button.addEventListener('click', function () {
+    CallCompApi();
+    titleText.classList.add('hide-element');
+    scoreText.classList.remove('hide-element');
 
+    
+    BestOf1Button.classList.add('hide-element');
+    BestOf5Button.classList.add('hide-element');
+    BestOf7Button.classList.add('hide-element');
+    
+    ButtonRock.classList.remove('hide-element');
+    ButtonPaper.classList.remove('hide-element');
+    ButtonScissors.classList.remove('hide-element');
+    ButtonLizard.classList.remove('hide-element');
+    ButtonSpock.classList.remove('hide-element');
+    
+    
+    seriesText.classList.add('hide-element');
+    player1Text.classList.remove('hide-element');
 
+    GameLength = 4;
+    
+})
+function CallCompApi(){
+    fetch("https://scottsrpsls.azurewebsites.net/api/RockPaperScissors/GetRandomOption").then(
+        response => response.text()
+    ).then(
+        data => {
+            CompChoice = data;
+        }
+    );
+}
+ButtonRock.addEventListener('click', function () {
+    RoundNumber++;
+    CallCompApi();
+    Player1Choice = 'Rock';
+    if (CompChoice === 'Scissors' || CompChoice === 'Lizard') {
+        Player1Score++;
+    }
+    else if (CompChoice === 'Spock' || CompChoice === 'Paper') {
+        CompScore++;
+    }
+    scoreText.textContent = 'Score:' + Player1Score + '-' + CompScore;
+    if (GameLength === Player1Score) {
+        player1Text.textContent = 'Player 1 Wins!';
+    }else if (GameLength === CompScore) {
+        player1Text.textContent = 'You Lose!';
+    }
+})
+ButtonPaper.addEventListener('click', function () {
+    RoundNumber++;
+    CallCompApi();
+    Player1Choice = 'Paper';
+    if (CompChoice === 'Rock' || CompChoice === 'Spock') {
+        Player1Score++;
+    }
+    else if (CompChoice === 'Lizard' || CompChoice === 'Scissors') {
+        CompScore++;
+    }
+    scoreText.textContent = 'Score:' + Player1Score + '-' + CompScore;
+    if (GameLength === Player1Score) {
+        player1Text.textContent = 'Player 1 Wins!';
+    }else if (GameLength === CompScore) {
+        player1Text.textContent = 'You Lose!';
+    }
+})
+ButtonScissors.addEventListener('click', function () {
+    RoundNumber++;
+    CallCompApi();
+    Player1Choice = 'Scissors';
+    if (CompChoice === 'Lizard' || CompChoice === 'Paper') {
+        Player1Score++;
+    }
+    else if (CompChoice === 'Spock' || CompChoice === 'Rock') {
+        CompScore++;
+    }
+    scoreText.textContent = 'Score:' + Player1Score + '-' + CompScore;
+    if (GameLength === Player1Score) {
+        player1Text.textContent = 'Player 1 Wins!';
+    }else if (GameLength === CompScore) {
+        player1Text.textContent = 'You Lose!';
+    }
+})
+ButtonLizard.addEventListener('click', function () {
+    RoundNumber++;
+    CallCompApi();
+    Player1Choice = 'Lizard';
+    if (CompChoice === 'Paper' || CompChoice === 'Spock') {
+        Player1Score++;
+    }
+    else if (CompChoice === 'Rock' || CompChoice === 'Scissors') {
+        CompScore++;
+    }
+    scoreText.textContent = 'Score:' + Player1Score + '-' + CompScore;
+    if (GameLength === Player1Score) {
+        player1Text.textContent = 'Player 1 Wins!';
+    }else if (GameLength === CompScore) {
+        player1Text.textContent = 'You Lose!';
+    }
+})
+ButtonSpock.addEventListener('click', function () {
+    RoundNumber++;
+    CallCompApi();
+    Player1Choice = 'Spock';
+    if (CompChoice === 'Scissors' || CompChoice === 'Rock') {
+        Player1Score++;
+    }
+    else if (CompChoice === 'Lizard' || CompChoice === 'Paper') {
+        CompScore++;
+    }
+    scoreText.textContent = 'Score:' + Player1Score + '-' + CompScore;
+    if (GameLength === Player1Score) {
+        player1Text.textContent = 'Player 1 Wins!';
+    }else if (GameLength === CompScore) {
+        player1Text.textContent = 'You Lose!';
+    }
+})
+// document.getElementById('selectRow').style.backgroundColor = '#12373D'
 // In-Game

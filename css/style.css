@@ -22,13 +22,14 @@
 /* Things pertaining middle row */
 #selectRow {
     background-color: #AD342E; 
-    height: 167px;
+    height: 169px;
     align-items: center;
     color: rgb(215, 215, 215);
     font-family: 'Press Start 2P', cursive;
     display: flex;
     text-shadow: -1px 1px 2px black;
     justify-content: center;
+    padding: 0;
 }
 #selectText {
     justify-content: center;
@@ -37,11 +38,9 @@
     justify-content: center;
 }
 #player1Text {
-
     justify-content: center;
 }
 #player2Text {
-
     justify-content: center;
 }
 /* Things referring to button area */
