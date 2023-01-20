@@ -3,9 +3,7 @@
     background-color: #F4B88B;
     
 }
-.titleText {
-    font-size: 54px;
-}
+/* Things pertaining top row */
 #titleRow {
     background-color: #05294C;
     height: 237px;
@@ -15,29 +13,55 @@
     text-align: center;
     text-shadow: -1px 1px 2px black;
 }
-.scoreText {
+#titleText {
+    font-size: 54px;
+}
+#scoreText {
     font-size: 100px;
 }
-.selectRow {
+/* Things pertaining middle row */
+#selectRow {
     background-color: #AD342E; 
     height: 167px;
     align-items: center;
     color: rgb(215, 215, 215);
     font-family: 'Press Start 2P', cursive;
+    display: flex;
     text-shadow: -1px 1px 2px black;
-}
-.selectText {
-    display: flex;
     justify-content: center;
 }
-.seriesText {
-    display: flex;
+#selectText {
     justify-content: center;
 }
-.player1Text {
-    display: flex;
+#seriesText {
     justify-content: center;
 }
+#player1Text {
+
+    justify-content: center;
+}
+#player2Text {
+
+    justify-content: center;
+}
+/* Things referring to button area */
+#ButtonsRow {
+    height: 325px;
+    font-family: 'Press Start 2P', cursive; font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#Button1 {}
+#Button2 {}
+#BestOf1Button {}
+#BestOf5Button {}
+#BestOf7Button {}
+#ButtonRock {}
+#ButtonPaper {}
+#ButtonScissors {}
+#ButtonLizard {}
+#ButtonSpock {}
 .bigButton {
     height: 124px;
     width: 520px;
@@ -55,6 +79,7 @@
     border: 0;
     font-size: 45px;
     width: 417px;
+    height: 69.5px;
     align-items: center;
 }
 .gameButtons {
@@ -68,13 +93,7 @@
     height: 69.5px;
     align-items: center;
 }
-#ButtonsRow {
-    height: 325px;
-    font-family: 'Press Start 2P', cursive; font-size: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
+/* Things pertaining to foot */
 footer {
     text-align: center;
     font-family: 'Press Start 2P', cursive; font-size: 14px;
@@ -87,6 +106,12 @@ footer {
     margin: 0;
     align-items: center;
 }
+#FooterText {}
+#FooterName {}
+#FooterLink {}
+#RulesText {}
+
+
 .hide-element {
     display: none;
 }
