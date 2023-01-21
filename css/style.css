@@ -19,6 +19,9 @@
 #scoreText {
     font-size: 100px;
 }
+#choiceText {
+    justify-content: center;
+}
 /* Things pertaining middle row */
 #selectRow {
     background-color: #AD342E; 
@@ -50,6 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    text-align: center;
 }
 #Button1 {}
 #Button2 {}
@@ -116,3 +120,41 @@ footer {
 }
 /* FOR PLAYER 2 CHOOSE */
 /* background-color: #12373D; */
+
+
+@media screen and (max-width: 769px) {
+    #titleText {
+    font-family: 'Press Start 2P', cursive; font-size: 21px;
+    margin-left: 10px; margin-right: 10px;
+    }
+    #player1Text {
+        text-align: center;
+    }
+    #scoreText {
+        font-size: 40px;
+    }
+    #ButtonsRow {
+        height: 225px;
+    }
+    .bigButton {
+        font-size: 20px;
+        width: 200px;
+        height: 100px;
+    }
+    .seriesButtons {
+        font-size: 20px;
+        width: 100px;
+        height: 100px;
+        align-items: center;
+    }
+    .gameButtons {
+        font-size: 8px;
+        width: 75px;
+        
+    }
+    footer {
+        display: table;
+        font-size: 10px;
+    }
+    
+}
